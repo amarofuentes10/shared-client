@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Ruta de salud
 app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
+  res.json({ status: "error" });
 });
 
 // Ruta de saludo
