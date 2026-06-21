@@ -1,2 +1,3 @@
 console.log("Running tests...");
-process.exit(0);
+console.error("Falla intencional Lab 3.1 - Fail Fast");
+process.exit(1);
