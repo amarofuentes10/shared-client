@@ -17,12 +17,12 @@ spec:
     spec:
       containers:
       - name: api
-        image: amarofuentes10/shared-client:latest
+        image: amaroantonio/shared-client:latest
         ports:
         - containerPort: 3000
         livenessProbe:
           httpGet:
-            path: /ruta-que-no-existe
+            path: /health
             port: 3000
           initialDelaySeconds: 15
           periodSeconds: 10

@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: amarofuentes10/shared-client:latest
+        image: amaroantonio/shared-client:latest
         ports:
         - containerPort: 3000
