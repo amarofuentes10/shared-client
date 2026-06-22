@@ -1,3 +1,3 @@
 console.log("Running tests...");
-console.error("Falla intencional Lab 3.1 - Fail Fast");
-process.exit(0);
+console.error("Falla intencional EA3 - etapa deps-and-test");
+process.exit(1);
