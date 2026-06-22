@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-api-green
+  namespace: lab32
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-api
+      slot: green
+  template:
+    metadata:
+      labels:
+        app: demo-api
+        slot: green
+    spec:
+      containers:
+      - name: api
+        image: amarofuentes10/shared-client:latest
+        ports:
+        - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /ruta-que-no-existe
+            port: 3000
+          initialD          initialD          initialD          in      failureThreshold         cat > k8s/lab-3.2/06-service-bg.yaml <<'          initialv1
+kind:kiervice
+metadata:
+  name:  name:  namesvc
+  namespace: lab32
+spec:
+  type: NodePort
+  selector:
+    app: demo-api
+    slot: blue
+  ports:
+  -  -  -  -  -  -  ar  -  - : 3  -  -  -  -  rt: 30081

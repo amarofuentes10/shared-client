@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-api-blue
+  namespace: lab32
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-api
+      slot: blue
+  template:
+    metadata:
+      labels:
+        app: demo-api
+        slot: blue
+    spec:
+      containers:
+      - name: api
+        image: amarofuentes10/shared-client:latest
+        ports:
+        - containerPort: 3000
